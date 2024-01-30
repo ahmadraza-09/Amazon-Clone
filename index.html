@@ -16,6 +16,9 @@
 </head>
 <body>
 
+    <!-- Loader -->
+    <div class="preloader"></div>
+
     <!-- Header -->
     <header id="#top" >
 
@@ -32,11 +35,23 @@
             </div>
 
             <!-- Nav Address -->
-            <div class="nav-address border">
-                <p class="add-first">Deliver to AHMAD</p>
+            <div class="nav-address border" onclick="showLocationDiv(); showMainOpacity();">
+                <p class="add-first">Deliver to</p>
                 <div class="add-icon">
                     <i class="fa-solid fa-location-dot"></i>
-                    <p class="add-sec">India</p>
+                    <p class="location-text">Add Location </p>
+                </div>
+
+                <div class="select-location-div">
+                    <div class="select-location">
+                        <div class="header">
+                            <h3>Choose your location</h3>
+                        </div>
+
+                        <div class="location-main">
+                            <button>Add Current Location</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -607,9 +622,7 @@
         </div>
 
         <!-- Empty Box -->
-        <div class="main-empty-div">
-            
-        </div>
+        <div class="main-empty-div"></div>
 
         <!-- Main Products Sliders -->
         <div class="main-product-slider-section">
@@ -617,336 +630,280 @@
             <!-- Slider One -->
             <div class="product-slider">
 
-                <!-- Slider Wrapper -->
-                <div class="slider-wrapper">
+                <div class="product-slider-heading flex-div">
+                    <h3>Today's Deals</h3>
+                    <span><a href="#">See all deals</a></span>
+                </div>
 
-                    <!-- Slider Left Button -->
-                    <button id="prev-slide" class="slide-button"><i class="fa-solid fa-chevron-left"></i></button>
-
-                    <!-- Slider Heading -->
-                    <div class="product-slider-heading">
-                        <h3>
-                            Today's Deals 
-                            <span>
-                                <a href="#">See all deals</a>
-                            </span>
-                        </h3>
+                <div class="container">
+                    <div class="slider-wrapper">
+                      <button id="prev-slide" class="slide-button material-symbols-rounded"><i class="fa-solid fa-chevron-left"></i></button>
+                      <ul class="image-list">
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img1.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img2.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img18.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img4.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img5.jpg" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img6.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img7.jpg" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img8.jpg" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img9.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img10.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img11.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img12.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img13.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-box-slider">
+                            <div class="product-box-image">
+                                <img class="image-item" src="Images/product-slider-img17.png" alt="img-1" />
+                            </div>
+                            <div class="product-text">
+                                <div class="product-text-upper">
+                                    <div class="product-discount">
+                                        <p>Up to 94% off</p>
+                                    </div>
+                                    <span>
+                                        Deal of the Day
+                                    </span>
+                                </div>
+                                <div class="product-text-lower">
+                                    Travel Adapters And Electronic Accessories from RTS
+                                </div>
+                            </div>
+                        </div>
+                        
+                      </ul>
+                      <button id="next-slide" class="slide-button material-symbols-rounded"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
-
-                    <!-- Slider Box -->
-                    <div class="box-slider">
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img1.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img2.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img2.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img4.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img2.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img6.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img5.jpg" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img7.jpg" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img9.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img10.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img11.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <!-- Slider Right Button -->
-                    <button id="next-slide" class="slide-button"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="slider-scrollbar">
+                      <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                      </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slider Two -->
-            <div class="product-slider">
-
-                <!-- Slider Wrapper2 -->
-                <div class="slider-wrapper slider-wrapper2">
-
-                    <!-- Slider Left Button -->
-                    <button id="prev-slide" class="slide-button slide-button2"><i class="fa-solid fa-chevron-left"></i></button>
-
-                    <!-- Slider Heading -->
-                    <div class="product-slider-heading">
-                        <h3>
-                            Today's Deals 
-                            <span>
-                                <a href="#">See all deals</a>
-                            </span>
-                        </h3>
-                    </div>
-
-                    <!-- Slider Box -->
-                    <div class="box-slider box-slider2">
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img1.png" alt="">
-                            </div>
-                            <div class="product-text">
-                                <div class="product-text-upper">
-                                    <div class="product-discount">
-                                        <p>Up to 94% off</p>
-                                    </div>
-                                    <span>
-                                        Deal of the Day
-                                    </span>
-                                </div>
-
-                                <div class="product-text-lower">
-                                    Travel Adapters And Electronic Accessories from RTS
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img2.png" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img2.png" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img4.png" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img2.png" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img6.png" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img5.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img7.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img9.png" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img10.png" alt="">
-                            </div>
-                        </div>
-                        <div class="product-box-slider">
-                            <div class="product-box-image">
-                                <img src="Images/product-slider-img11.png" alt="">
-                            </div>
-                        </div>
-                    </div>  
-
-                    <!-- Slider Right Button -->
-                    <button id="next-slide" class="slide-button slide-button2"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div>
+                
 
             <!-- Slider Products -->
             <div class="slider-products">
@@ -1031,8 +988,6 @@
                     <a href="#">See all deals</a>
                 </div>
             </div>
-
-            
 
             <!-- Slider Products -->
             <div class="slider-products">
