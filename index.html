@@ -16,9 +16,6 @@
 </head>
 <body>
 
-    <!-- Loader -->
-    <div class="preloader"></div>
-
     <!-- Header -->
     <header id="#top" >
 
@@ -78,43 +75,43 @@
                 </div>
                 
                 <div class="lang-section" >
-                    <h3>EN</h3>
+                    <h3 class="language-value">EN</h3>
                     <i class="fa-solid fa-sort-down"></i>
 
                     <!-- Language Dropdown -->
                     <div class="lang-dropdown">
                         <div class="langauage-default flex-div lang-div">
-                            <input name="language" type="radio">
+                            <input name="language" type="radio" value="EN" onclick="changeLangValue('EN');" >
                             <h3>English - EN</h3>
                         </div>
                         
                         <div class="language-list">
                             <div class="flex-div lang-div">
-                                <input name="language" type="radio">
+                                <input name="language" type="radio" value="HI" onclick="changeLangValue('HI');">
                                 <h3>हिन्दी - HI</h3>
                             </div>
                             <div class="flex-div lang-div">
-                                <input name="language" type="radio">
+                                <input name="language" type="radio" value="TA" onclick="changeLangValue('TA');">
                                 <h3>தமிழ் - TA</h3>
                             </div>
                             <div class="flex-div lang-div">
-                                <input name="language" type="radio">
+                                <input name="language" type="radio" value="TE" onclick="changeLangValue('TE');">
                                 <h3>తెలుగు - TE</h3>
                             </div>
                             <div class="flex-div lang-div">
-                                <input name="language" type="radio">
+                                <input name="language" type="radio" value="KN" onclick="changeLangValue('KN');">
                                 <h3>ಕನ್ನಡ - KN</h3>
                             </div>
                             <div class="flex-div lang-div">
-                                <input name="language" type="radio">
+                                <input name="language" type="radio" value="ML" onclick="changeLangValue('ML');">
                                 <h3>മലയാളം - ML</h3>
                             </div>
                             <div class="flex-div lang-div">
-                                <input name="language" type="radio">
+                                <input name="language" type="radio" value="BN" onclick="changeLangValue('BN');">
                                 <h3>বাংলা - BN</h3>
                             </div>
                             <div class="flex-div lang-div">
-                                <input name="language" type="radio">
+                                <input name="language" type="radio" value="MR" onclick="changeLangValue('MR');">
                                 <h3>मराठी - MR</h3>
                             </div>
 
@@ -275,19 +272,19 @@
 
             <!-- Menus List Options -->
             <ul class="menu-ops">
-                <li class="border2">Fresh</li>
-                <li class="border2">Amazon mini TV</li>
-                <li class="border2">Sell</li>
-                <li class="border2">Best Sellers</li>
-                <li class="border2">Today's Deals</li>
-                <li class="border2">Mobiles</li>
-                <li class="border2">Electronics</li>
-                <li class="border2">Prime</li>
-                <li class="border2">Gift Ideas</li>
-                <li class="border2">Customer Service</li>
-                <li class="border2">New Releases</li>
-                <li class="border2">Home & Kitchen</li>
-                <li class="border2">Fashion</li>
+                <a href="#" class="border2"><li>Fresh</li></a>
+                <a href="#" class="border2"><li>Amazon mini TV</li></a>
+                <a href="#" class="border2"><li>Sell</li></a>
+                <a href="#" class="border2"><li>Best Sellers</li></a>
+                <a href="#" class="border2"><li>Today's Deals</li></a>
+                <a href="#" class="border2"><li>Mobiles</li></a>
+                <a href="#" class="border2"><li>Electronics</li></a>
+                <a href="#" class="border2"><li>Prime</li></a>
+                <a href="#" class="border2"><li>Gift Ideas</li></a>
+                <a href="#" class="border2"><li>Customer Service</li></a>
+                <a href="#" class="border2"><li>New Releases</li></a>
+                <a href="#" class="border2"><li>Home & Kitchen</li></a>
+                <a href="Product Page/product.html" class="border2"><li>Fashion</li></a>
             </ul>
         </div>
 
@@ -450,7 +447,16 @@
             <!-- Hero Slider -->
             <div class="slider">
                 <section class="main-slider">
-                    <img class="slider-image" src="" alt="">
+                    <div class="left-button slider-button" onclick="moveNext();">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+
+                    <img class="slider-image" alt="" onclick="stopSlideShow();">
+                    
+
+                    <div class="right-button slider-button" onclick="movePrevious();">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
                 </section>
             </div>
         </div>
@@ -902,8 +908,6 @@
                     </div>
                 </div>
             </div>
-
-                
 
             <!-- Slider Products -->
             <div class="slider-products">

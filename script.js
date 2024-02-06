@@ -1,10 +1,3 @@
-
-// Preloader 
-var loader = document.querySelector('.preloader');
-window.addEventListener("load", function() {
-    loader.style.display = 'none';
-})
-
 // Get Current Location
 let locationButton = document.querySelector('button');
 let locationDiv = document.querySelector('.location-text');
@@ -37,9 +30,22 @@ const showLocation = async (position) => {
     locationDiv.innerText = `${data.address.city} ${data.address.postcode}`;
 };
 
+// Get Languages from Value
+let languageValue = document.querySelector('.language-value');
+let languageInput = document.querySelector('.language-input');
+
+if (localStorage.getItem('language')) {
+    languageValue.innerHTML = localStorage.getItem('language');
+}
+
+function changeLangValue (value) {
+    languageValue.innerHTML = localStorage.getItem('language');
+    
+    localStorage.setItem('language', value);        
+};
 
 // Hero Section Slider
-var counter = 0;
+var count = 0;
 var images = [
     'Images/hero-banner1.jpg',
     'Images/hero-banner2.jpg',
@@ -52,17 +58,43 @@ var images = [
  ];
 
 function slideShow() {
-    document.querySelector('.slider-image').src = images[counter];
+    document.querySelector('.slider-image').src = images[count];
 
-    setTimeout(slideShow, 4000)
-    if (counter >= images.length -1) {
-        counter = 0;
+    if (count >= images.length-1) {
+        count = 0;
     } else {
-        counter++;
+        count++;
     }   
 }
 
+var mySlideShowFunction = setInterval(slideShow,4000);
 slideShow();
+
+function stopSlideShow () {
+    setInterval(slideShow,4000);
+}
+
+function moveNext(){
+ clearInterval(mySlideShowFunction);
+ document.querySelector('.slider-image').src = images[count];
+ if(count == images.length-1){
+         count = 0;
+ }else{
+     count++;
+ }
+ 
+}
+
+function movePrevious(){
+ clearInterval(mySlideShowFunction);
+ document.querySelector('.slider-image').src = images[count];
+ if(count == 0){
+     count = images.length-1;
+ }else{
+     count--;
+ }
+}
+
 
 // Main Opacity Function
 var opacityBox = document.querySelector('.opacity-box');
